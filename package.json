@@ -1,0 +1,19 @@
+{
+  "name": "leave-request-workflow",
+  "version": "1.0.0",
+  "description": "Leave Request Workflow SaaS HR Platform",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build && cd ../backend && npm run build",
+    "start": "cd backend && npm start",
+    "test": "concurrently \"cd backend && npm test\" \"cd frontend && npm test\"",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "author": "Ammar Bin Shakir",
+  "license": "MIT"
+}
